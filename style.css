@@ -1,0 +1,313 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: fontum;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+@font-face {
+    font-family: fontum;
+    src: url(dist/font/itc-serif-gothic-light-588cee8a0bfb1.otf);
+}
+
+@font-face {
+    font-family: fontdois;
+    src: url(dist/font/Fontspring-DEMO-proximanova-black.otf);
+}
+
+@font-face {
+    font-family: fontsym;
+    src: url(dist/font/Aurebesh.otf);
+}
+
+.section {
+    display: block;
+}
+
+.logo-starwars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5.6vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo-starwars-item {
+    max-width: 540px;
+    width: 100%;
+    color: #fff;
+}
+
+.about,
+.soundtrack,
+.death-star {
+    padding: 5.6vw;
+    height: 100vh;
+}
+
+.line-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.criptografado {
+    color: #fff;
+    margin-top: 5px;
+    font-family: fontsym;
+    opacity: .7;
+}
+
+.title {
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.about__content,
+.death-star__content,
+.soundtrack__content {
+    display: flex;
+    align-items: center;
+}
+
+.about__content__image,
+.death-star__content__image,
+.soundtrack__content__image {
+    height: 320px;
+    margin-right: 32px;
+    transition: all .4s ease;
+}
+
+.about__content__image--margin-left,
+.death-star__content__image--margin-left,
+.soundtrack__content__image--margin-left {
+    margin-left: 50px;
+}
+
+.text {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.about__content__description:first-child,
+.death-star__content__description:first-child,
+.soundtrack__content__description:first-child {
+    margin-bottom: 24px;
+}
+
+.p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+.characters {
+    padding: 5.6;
+}
+
+.characters__list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+    padding-top: 32px;
+    list-style: none;
+}
+
+.characters__list__item {
+    padding: 26px;
+    background-color: #060726;
+    border-radius: 9px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.characters__list__item:hover{
+    transform: scale(1.1);
+}
+
+.characters__list__item__image {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.characters__list__item__name {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.characters__list__item__real-name {
+    color: #7b8c86;
+    transition: all .2s ease;
+}
+
+.characters__list__item--good:hover {
+    background-color: green;
+}
+
+.characters__list__item--evil:hover {
+    background-color: red;
+}
+
+@media(min-width:360px) and (max-width: 767px) {
+    .logo-starwars {
+        margin-bottom: 56px;
+    }
+}
+
+@media(min-width:360px) and (max-width: 767px) {
+
+    .about,
+    .death-star,
+    .soundtrack {
+        margin-bottom: 56px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1024px) {
+
+    .about,
+    .death-star,
+    .soundtrack {
+        margin-bottom: 64px;
+    }
+}
+
+@media(min-width:360px) and (max-width: 767px) {
+
+    .about__content,
+    .death-star__content,
+    .soundtrack__content {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media(min-width:768px)and (max-width:1024px) {
+
+    .about__content,
+    .death-star__content,.soundtrack__content {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media(min-width: 360px)and (max-width: 767px) {
+
+    .about__content__image,
+    .death-star__content__image,
+    .soundtrack__content__image {
+        max-width: 300px;
+        height: 230px;
+        margin: 0;
+    }
+}
+
+@media(min-width:768px)and (max-width:1024px) {
+
+    .about__content__image,
+    .death-star__content__image,
+    .soundtrack__content__image {
+        margin: 0;
+    }
+}
+
+@media(max-width:768px) {
+    .about__content__image--margin-left,
+    .death-star__content__image--margin-left,
+    .soundtrack__content__image--margin-left{
+        margin: 0;
+    }
+}
+
+@media(min-width: 360px)and (max-width: 767px){
+    .characters__list{
+        flex-direction: column;
+    }
+}
+
+@media(min-width:768px)and (max-width:1024px){
+    .characters__list{
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1024px)and (max-width:1700px){
+    .characters__list{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width:1024px)and (max-width:1700px){
+    .characters__list__item{
+        width: 50%;
+    }
+}
+
+@media(min-width: 500px){
+    .characters__list__item__image{
+        width: auto;
+    }
+}
+
+@media(min-width: 360px)and (max-width: 767px){
+    .text{
+        font-size: 16px;
+        color: #fff;
+        font-weight: 200;
+    }
+}
+
+@media(min-width:768px)and (max-width:1024px){
+    .text{
+        font-size: 18px;
+        color: #fff;
+        font-weight: 200;
+    }
+}
+
+@media(min-width: 360px)and (max-width: 767px){
+    .title{
+        font-size: 18px;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+}
+
+@media(min-width:768px)and (max-width:1024px){
+    .title{
+        font-size: 20px;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    body
+    {
+        overflow-x: hidden;
+    }
+  }
+
+  @media(max-width:1700px){
+    .item
+    {
+        display: none;
+    }
+  }
